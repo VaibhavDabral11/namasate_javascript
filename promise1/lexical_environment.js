@@ -57,3 +57,35 @@ const z = 3;
 console.log("outside bracket var x :", x) //outside bracket var x : 2
 console.log("outside bracket let y :", y); //outside bracket let y : 2
 console.log("outside bracket const z :", z); //outside bracket const z : 3
+//data hidding
+let sector; {
+    const angle = Math.PI / 3;
+    const radius = 10;
+    sector = {
+        radius,
+        angle,
+        area: (angle / 2) * radius ** 2,
+        perimeter: 2 * radius + angle * radius,
+    };
+    console.log(angle) //1.0471975511965976
+}
+console.log(angle) //not-define
+console.log(sector);
+// {
+//   radius: 10,
+//   angle: 1.0471975511965976,
+//   area: 52.35987755982988,
+//   perimeter: 30.471975511965976
+// }
+console.log(typeof radius); // "undefined"
+//closures
+
+function x() {
+    var a = 7;
+
+    function y() {
+        console.log(a) //7
+    }
+    y();
+}
+x();
