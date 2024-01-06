@@ -54,3 +54,20 @@ handlePromise();
 console.log("Namaste JavaScript");
 //}
 //getData();
+import fetch from 'node-fetch'
+const Api_url = "https://jsonplaceholder.typicode.com/posts/1"
+async function handlePromise() {
+    try {
+        const data = await fetch(Api_url);
+        const jsonValue = await data.json();
+        console.log(jsonValue)
+            //Or
+            //fetch(Api_url).then(res => res.json()).then(res => console.log(res))
+    } catch (error) {
+        console.log("Error in fetching data", error);
+    }
+}
+handlePromise()
+
+// const Api_url = "https://api.github.com/users/vaibhavdabral11"
+// const Api_url2 = "https://ertyu.com"

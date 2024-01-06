@@ -1,5 +1,5 @@
 console.log("hellow world")
-
+import fetch from 'node-fetch'
 // What is async ?
 /*Async keyword provide the ability to run asynchronous task inside a synchronous , single theard language like javascript. Async function 
 always return promise in any case.*/
