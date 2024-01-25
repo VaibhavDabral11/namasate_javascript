@@ -23,13 +23,14 @@ It makes the code wait until the promise returns a result. It only makes the asy
 const p6 = new Promise((resolve, reject) => {
     resolve("Promise Resolved Value!!");
 });
-
+// this is the old style for promise error handling in ES5
 function handleP6() {
     p6.then((res) => console.log("handle promise using .then and catch",
         res))
 }
 handleP6();
 
+// this is the new style for promise error handling in ES6 
 // async function handleP6() {
 //     const val = await p6;
 //     console.log(val);
