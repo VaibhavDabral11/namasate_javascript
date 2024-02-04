@@ -1,4 +1,12 @@
 console.log("hellow world")
+// What is async ?
+// What is await ?
+// How async await works behind the scenes ?
+// Examples of using async / await
+// Error Handling
+// Interviews
+// Async await vs Promise.then / .catch
+
 import fetch from 'node-fetch'
 // What is async ?
 /*Async keyword provide the ability to run asynchronous task inside a synchronous , single theard language like javascript. Async function 
@@ -16,7 +24,7 @@ it in a promise which is resolved with its value. In the above case async functi
 It makes the code wait until the promise returns a result. It only makes the async block wait.*/
 
 // **
-// ** ** await can only be used inside async ** ** ** *
+// ** ** await can only be used inside async ** ** *
 // **
 // ** handle promise using async and await * /
 
@@ -171,3 +179,4 @@ async function handlePromiseErrorOlderWay() {
 
 }
 handlePromiseErrorOlderWay().catch((err) => console.log(err))
+
